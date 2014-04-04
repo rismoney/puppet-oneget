@@ -9,6 +9,16 @@ Puppet::Type.type(:package).provide(:oneget, :parent => Puppet::Provider::Packag
 
   has_feature :installable, :uninstallable, :upgradeable, :versionable, :install_options
 
+  commands :poshexec =>
+    if File.exists?("#{ENV['SYSTEMROOT']}\\sysnative\\WindowsPowershell\\v1.0\\powershell.exe")
+      "#{ENV['SYSTEMROOT']}\\sysnative\\WindowsPowershell\\v1.0\\powershell.exe"
+    elsif File.exists?("#{ENV['SYSTEMROOT']}\\system32\\WindowsPowershell\\v1.0\\powershell.exe")
+      "#{ENV['SYSTEMROOT']}\\system32\\WindowsPowershell\\v1.0\\powershell.exe"
+    else
+      'powershell.exe'
+    end
+
+  @@connstr= "import-module OneGet"
 
   def install
   end
