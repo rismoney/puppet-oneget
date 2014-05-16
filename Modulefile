@@ -1,5 +1,5 @@
 name    'rismoney-oneget'
-version '0.0.1'
+version '0.1.0'
 source 'https://github.com/rismoney/puppet-oneget'
 author 'rismoney'
 license 'APACHE2'

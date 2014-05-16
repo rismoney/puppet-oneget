@@ -12,7 +12,9 @@ OneGet is a unified interface to package management systems and aims to make Sof
 What is Puppet? Puppet is IT automation software that helps system administrators manage infrastructure throughout its lifecycle, from provisioning and configuration to patch management and compliance. Using Puppet, you can easily automate repetitive tasks, quickly deploy critical applications, and proactively manage change, scaling from 10s of servers to 1000s, on-premise or in the cloud.
 
 What is puppet-oneget?
-Lets you use Onget with Puppet as a package provider.
+Lets you use Oneget with Puppet as a package provider.
 
 Status:
-Not yet available.  Stayed tuned!!! oneget was just announced yesterday!
+This is now in beta and supports ensure => present, absent and version only.
+Will not yet perform upgrades or latest.  This is pending.
+Other needed pieces: unit tests (rspec)

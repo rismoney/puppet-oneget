@@ -2,7 +2,7 @@
   $pkg = 'notepadplusplus'
 
   package { $pkg:
-    ensure          => 'latest',
+    ensure          => 'present',
     provider        => 'oneget',
  
   }
